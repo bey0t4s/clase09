@@ -4,9 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="./css/index.css">
     <title>Clase09</title>
 </head>
 <body>
-    
+    <div class="container">
+        <hr>
+        <h1>Calculadora JS</h1>
+        <hr>
+        <div class="m-5">
+            <button onclick="iniciar()" class="btn btn-primary">Inciar Cálculo</button>
+        </div> 
+        <div class="m-5">
+            <button onclick="saludar()" class="btn btn-primary">Saludar</button>
+        </div> 
+
+        <button onclick="sumar()" class="btn btn-success m-3">Suma</button>
+        <button onclick="restar()" class="btn btn-success m-3">Resta</button>
+        <button onclick="multiplicar()" class="btn btn-success m-3">Multipicación</button>
+        <button onclick="dividir()" class="btn btn-success m-3">División</button>
+        
+        <hr>
+        <div class="m-3"> 
+            <h3 id="resultado">El resultado es: </h3>
+        </div>
+    </div>
+
+    <script src="./js/index.js"></script>
 </body>
 </html>
