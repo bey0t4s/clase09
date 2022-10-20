@@ -11,32 +11,41 @@ function saludar(){
     resultado.innerHTML = 'hola usuario, un placer!!';
 }
 function iniciar(){
-    numero1 = prompt('ingrese un nro.:');
-    numero2 = prompt('ingrese otro nro.:');
+    numero1 = Number(prompt('ingrese un nro.:').replace(',','.'));
+    numero2 = Number(prompt('ingrese otro nro.:').replace(',','.'));
+}
 
-    console.log(numero1, numero2);
+function validar(){
+    if(isNaN(numero1) || isNaN(numero2))
+    {
+        alert('Debe ingresar un valor numérico')
+    }
+    else if(numero1 == "" || numero2 == "")
+    {
+        alert('Debe completar ambos valores')
+    }
 }
 
 function sumar() {
-    suma = Number(numero1) + Number(numero2);
-    console.log(resultado.textContent + suma);
-    resultado.innerHTML = 'El resultado es: ' + suma;
+    validar();
+    suma = numero1 + numero2;
+    resultado.innerHTML = `El resultado es: ${suma}`;
 }
 
 function restar() {
-    resta = Number(numero1) - Number(numero2);
-    console.log(resultado.textContent + resta);
-    resultado.innerHTML = 'El resultado es: ' + resta;
+    validar();
+    resta = numero1 - numero2;
+    resultado.innerHTML = `El resultado es: ${resta}`;
 }
 
 function multiplicar() {
-    multiplicacion = Number(numero1) * Number(numero2);
-    console.log(resultado.textContent + multiplicacion);
-    resultado.innerHTML = 'El resultado es: ' + multiplicacion;
+    validar();
+    multiplicacion = numero1 * numero2;
+    resultado.innerHTML = `El resultado es: ${multiplicacion}`;
 }
 
 function dividir() {
-    division = Number(numero1) / Number(numero2);
-    console.log(resultado.textContent + division);
-    resultado.innerHTML = 'El resultado es: ' + division;
+    validar();
+    division = numero1 / numero2;
+    resultado.innerHTML = `El resultado es: ${division}`;
 }
